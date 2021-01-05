@@ -1,0 +1,58 @@
+[
+  {
+    "model": "stock.stock",
+    "pk": 1,
+    "fields": {
+      "flavour": 1,
+      "size": "L"
+    }
+  },
+  {
+    "model": "stock.stock",
+    "pk": 2,
+    "fields": {
+      "flavour": 1,
+      "size": "M"
+    }
+  },
+  {
+    "model": "stock.stock",
+    "pk": 3,
+    "fields": {
+      "flavour": 1,
+      "size": "S"
+    }
+  },
+  {
+    "model": "stock.stock",
+    "pk": 4,
+    "fields": {
+      "flavour": 2,
+      "size": "L"
+    }
+  },
+  {
+    "model": "stock.stock",
+    "pk": 5,
+    "fields": {
+      "flavour": 2,
+      "size": "M"
+    }
+  },
+  {
+    "model": "stock.stock",
+    "pk": 6,
+    "fields": {
+      "flavour": 3,
+      "size": "L"
+    }
+  },
+  {
+    "model": "stock.stock",
+    "pk": 7,
+    "fields": {
+      "flavour": 4,
+      "size": "L"
+    }
+  }
+]

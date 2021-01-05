@@ -1,0 +1,50 @@
+[
+  {
+    "model": "flavours.flavour",
+    "pk": 1,
+    "fields": {
+      "name": "Strawberry",
+      "image": "https://d2cbg94ubxgsnp.cloudfront.net/Pictures/1024x536/4/0/8/132408_shutterstock_406445776.jpg"
+    }
+  },
+  {
+    "model": "flavours.flavour",
+    "pk": 2,
+    "fields": {
+      "name": "Vanilla",
+      "image": "https://d2cbg94ubxgsnp.cloudfront.net/Pictures/1024x536/4/0/8/132408_shutterstock_406445776.jpg"
+    }
+  },
+  {
+    "model": "flavours.flavour",
+    "pk": 3,
+    "fields": {
+      "name": "Banana",
+      "image": "https://d2cbg94ubxgsnp.cloudfront.net/Pictures/1024x536/4/0/8/132408_shutterstock_406445776.jpg"
+    }
+  },
+  {
+    "model": "flavours.flavour",
+    "pk": 4,
+    "fields": {
+      "name": "Apple",
+      "image": "https://d2cbg94ubxgsnp.cloudfront.net/Pictures/1024x536/4/0/8/132408_shutterstock_406445776.jpg"
+    }
+  },
+  {
+    "model": "flavours.flavour",
+    "pk": 5,
+    "fields": {
+      "name": "Orange",
+      "image": "https://d2cbg94ubxgsnp.cloudfront.net/Pictures/1024x536/4/0/8/132408_shutterstock_406445776.jpg"
+    }
+  },
+  {
+    "model": "flavours.flavour",
+    "pk": 6,
+    "fields": {
+      "name": "Blackcurrant",
+      "image": "https://d2cbg94ubxgsnp.cloudfront.net/Pictures/1024x536/4/0/8/132408_shutterstock_406445776.jpg"
+    }
+  }
+]
