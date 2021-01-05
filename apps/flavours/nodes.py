@@ -7,9 +7,9 @@ from .models import Flavour
 class FlavourNode(DjangoObjectType):
     class Meta:
         model = Flavour
+        fields = ['id', 'name', 'stock']
         filter_fields = {
             'name': ['exact', 'icontains', 'istartswith'],
-            # 'image': ['exact', 'icontains'],
             'stock': ['exact'],
             'stock__size': ['exact'],
             'stock__quantity': ['exact', 'lt', 'lte', 'gt', 'gte'],

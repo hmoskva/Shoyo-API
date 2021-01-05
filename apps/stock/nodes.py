@@ -7,5 +7,9 @@ from .models import Stock
 class StockNode(DjangoObjectType):
     class Meta:
         model = Stock
-        filter_fields = ['id', "size", "quantity"]
+        fields = ['id', "size", "quantity"]
+        filter_fields = {
+            'size': ['exact'],
+            'quantity': ['exact', 'lt', 'lte', 'gt', 'gte'],
+        }
         interfaces = [relay.Node, ]
