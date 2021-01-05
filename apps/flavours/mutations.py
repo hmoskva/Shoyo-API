@@ -8,7 +8,7 @@ from .nodes import FlavourNode
 from .models import Flavour
 
 
-class RelayCreateFlavour(relay.ClientIDMutation):
+class CreateFlavour(relay.ClientIDMutation):
     class Input:
         name = graphene.String(required=True)
 
@@ -19,12 +19,12 @@ class RelayCreateFlavour(relay.ClientIDMutation):
         try:
             flavour = Flavour(name=name)
             flavour.save()
-            return RelayCreateFlavour(flavour=flavour)
+            return CreateFlavour(flavour=flavour)
         except Exception as e:
             raise GraphQLError(str(e))
 
 
-class RelayUpdateFlavour(relay.ClientIDMutation):
+class UpdateFlavour(relay.ClientIDMutation):
     class Input:
         name = graphene.String(required=True)
         id = graphene.ID()
@@ -37,11 +37,11 @@ class RelayUpdateFlavour(relay.ClientIDMutation):
             flavour = Flavour.objects.get(pk=from_global_id(id)[1])
             flavour.name = name
             flavour.save()
-            return RelayUpdateFlavour(flavour=flavour)
+            return UpdateFlavour(flavour=flavour)
         except Exception as e:
             raise GraphQLError(str(e))
 
 
 class FlavourMutation(graphene.AbstractType):
-    relay_create_flavour = RelayCreateFlavour.Field()
-    relay_update_flavour = RelayUpdateFlavour.Field()
+    create_flavour = CreateFlavour.Field()
+    update_flavour = UpdateFlavour.Field()
