@@ -5,7 +5,12 @@ Shoyo Graphql API
 Setting Up
 ^^^^^^^^^^^^^^^^^^^^^
 
-* To get started, run migrations and visit graphql route.
+* To get started, Install requirmeents, run migrations and visit graphql route.
+
+* Included makefile requires following environment variables. Ensure you have them in your .env if you want to use make::
+
+    $ PYTHON=python3 APP_DOR=. BIN=env/bin
+
 
 * To run migrations, use this command::
 
