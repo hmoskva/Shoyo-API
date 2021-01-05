@@ -14,7 +14,11 @@ Setting Up
 
 * To run migrations, use this command::
 
-    $ python manage.py migrate
+    $ python manage.py migrate or make migrate
+
+* To run server, use this command::
+
+    $ python manage.py runserver or make run
 
 * To visit graphql route, use this url::
 
