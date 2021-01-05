@@ -1,19 +1,10 @@
 import graphene
+from graphene import relay
+from graphene_django.filter import DjangoFilterConnectionField
 
-from .types import FlavourType
-from .models import Flavour
+from .nodes import FlavourNode
 
 
 class FlavourQuery(graphene.ObjectType):
-    all_flavours = graphene.List(FlavourType)
-    flavour_by_name = graphene.Field(
-        FlavourType, name=graphene.String(required=True))
-
-    def resolve_all_flavours(root, info):
-        return Flavour.objects.select_related().all()
-
-    def resolve_flavour_by_name(root, info, name):
-        try:
-            return Flavour.objects.get(name=name)
-        except Flavour.DoesNotExist:
-            return None
+    all_flavours = DjangoFilterConnectionField(FlavourNode)
+    flavour = relay.Node.Field(FlavourNode)

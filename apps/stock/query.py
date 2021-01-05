@@ -1,11 +1,9 @@
 import graphene
+from graphene import relay
+from graphene_django.filter import DjangoFilterConnectionField
 
-from .types import StockType
-from .models import Stock
+from .nodes import StockNode
 
 
 class StockQuery(graphene.ObjectType):
-    all_stock = graphene.List(StockType)
-
-    def resolve_all_stock(root, info):
-        return Stock.objects.all()
+    all_stock = DjangoFilterConnectionField(StockNode)

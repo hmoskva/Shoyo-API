@@ -123,5 +123,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 GRAPHENE = {
-    "SCHEMA": "shoyoapi.schema.schema"
+    "SCHEMA": "shoyoapi.schema.schema",
+    "ATOMIC_MUTATIONS": True
 }
